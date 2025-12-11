@@ -1,0 +1,30 @@
+
+> web-kichwa@0.1.0 build
+> next build
+
+   Ôû▓ Next.js 16.0.8 (Turbopack)
+
+ ÔÜá The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+   Creating an optimized production build ...
+ Ô£ô Compiled successfully in 3.4s
+   Running TypeScript ...
+Failed to compile.
+
+.next/types/validator.ts:58:31
+Type error: Type 'typeof import("X:/WEB-KICHWA/src/app/[locale]/layout")' does not satisfy the constraint 'LayoutConfig<"/[locale]">'.
+  Types of property 'default' are incompatible.
+    Type '({ children, params: { locale } }: { children: ReactNode; params: { locale: string; }; }) => Promise<Element>' is not assignable to type 'ComponentType<LayoutProps<"/[locale]">> | ((props: LayoutProps<"/[locale]">) => void | ReactNode | Promise<ReactNode> | Promise<...>)'.
+      Type '({ children, params: { locale } }: { children: ReactNode; params: { locale: string; }; }) => Promise<Element>' is not assignable to type 'FunctionComponent<LayoutProps<"/[locale]">>'.
+        Types of parameters '__0' and 'props' are incompatible.
+          Type 'LayoutProps<"/[locale]">' is not assignable to type '{ children: ReactNode; params: { locale: string; }; }'.
+            Types of property 'params' are incompatible.
+              Property 'locale' is missing in type 'Promise<{ locale: string; }>' but required in type '{ locale: string; }'.
+
+  56 |   type __IsExpected<Specific extends LayoutConfig<"/[locale]">> = Specific
+  57 |   const handler = {} as typeof import("../../src/app/[locale]/layout.js")
+> 58 |   type __Check = __IsExpected<typeof handler>
+     |                               ^
+  59 |   // @ts-ignore
+  60 |   type __Unused = __Check
+  61 | }
+Next.js build worker exited with code: 1 and signal: null

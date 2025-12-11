@@ -1,0 +1,83 @@
+.section {
+    padding: 6rem 1.5rem;
+    background-color: var(--bg-secondary);
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--color-white);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.iconWrapper {
+    width: 80px;
+    height: 80px;
+    background-color: var(--bg-secondary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: var(--color-black);
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--color-black);
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2.5rem;
+}
+
+.playerPlaceholder {
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 12px;
+}
+
+.progressBar {
+    height: 4px;
+    background-color: #ddd;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.progressBar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 30%;
+    background-color: var(--color-red);
+    border-radius: 2px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border-radius: 50%;
+}
+
+.play {
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-black);
+}

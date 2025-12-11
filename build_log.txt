@@ -1,0 +1,28 @@
+
+> web-kichwa@0.1.0 build
+> next build
+
+   Ôû▓ Next.js 16.0.8 (Turbopack)
+
+ ÔÜá The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+   Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./src/app/[locale]/layout.tsx:7:1
+Module not found: Can't resolve '../../globals.css'
+   5 | import Header from "../../components/Header";
+   6 | import Footer from "../../components/Footer";
+>  7 | import "../../globals.css";
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   8 |
+   9 | const outfit = Outfit({
+  10 |   subsets: ["latin"],
+
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (./src/app/[locale]/layout.tsx:7:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)

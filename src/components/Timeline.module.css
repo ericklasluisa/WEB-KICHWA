@@ -1,0 +1,131 @@
+.section {
+    padding: 6rem 1.5rem;
+    background-color: var(--bg-secondary);
+    overflow: hidden;
+}
+
+.title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    color: var(--color-black);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    background-color: var(--color-red);
+    top: 0;
+    height: 0;
+    /* Animated */
+    z-index: 1;
+}
+
+.eventsContainer {
+    position: relative;
+    z-index: 2;
+}
+
+.event {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+    position: relative;
+    width: 100%;
+}
+
+.left {
+    flex-direction: row;
+}
+
+.right {
+    flex-direction: row-reverse;
+}
+
+.content {
+    width: 45%;
+    background: var(--color-white);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.left .content {
+    text-align: right;
+}
+
+.right .content {
+    text-align: left;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--color-red);
+    margin-bottom: 0.5rem;
+    justify-content: inherit;
+}
+
+.content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-black);
+}
+
+.content p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background-color: var(--color-red);
+    border: 4px solid var(--color-white);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 0 4px rgba(211, 47, 47, 0.2);
+}
+
+@media (max-width: 768px) {
+    .line {
+        left: 20px;
+    }
+
+    .event {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 50px;
+    }
+
+    .right {
+        flex-direction: column;
+    }
+
+    .content {
+        width: 100%;
+        text-align: left !important;
+    }
+
+    .dot {
+        left: 20px;
+    }
+
+    .date {
+        justify-content: flex-start;
+    }
+}
