@@ -47,6 +47,7 @@ export default function Header() {
                         <li><Link href="/artesanias" onClick={toggleMenu}>{t('crafts')}</Link></li>
                         <li><Link href="/experiencias" onClick={toggleMenu}>{t('experiences')}</Link></li>
                         <li><Link href="/visita" onClick={toggleMenu}>{t('visit')}</Link></li>
+                        <li><a href="https://kichwa.vercel.app/" onClick={toggleMenu}>{t('dictionary')}</a></li>
                     </ul>
                 </nav>
 
